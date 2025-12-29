@@ -12,7 +12,7 @@ import hightechImg from '../assets/Hightech.png';
 import automotiveImg from '../assets/Automotive.png';
 import industrialImg from '../assets/Industrial.png';
 import aerospaceImg from '../assets/Aerospace-and-defence.png';
-import healthcareImg from '../assets/healthcare.png';
+import healthcareImg from '../assets/Healthcare.png';
 import eCommerceImg from '../assets/E-commerce.jpg';
 import expressImg from '../assets/Express-and-parcel-delivery.jpg';
 import airOceanImg from '../assets/Air-and-Ocean-Freight.jpg';
