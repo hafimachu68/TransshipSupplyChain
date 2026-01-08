@@ -4,58 +4,85 @@ import logo from '../assets/logo.png';
 
 const Header = () => {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  // Close mobile menu when a link is clicked
+  const handleLinkClick = () => {
+    setIsMobileMenuOpen(false);
+    setIsServicesOpen(false);
+  };
 
   return (
     <header className="header">
       <div className="container header-container">
-        <Link to="/" className="logo">
+        <Link to="/" className="logo" onClick={() => setIsMobileMenuOpen(false)}>
           <img src={logo} alt="TransShip" style={{ height: '55px' }} />
         </Link>
 
-        <nav className="nav">
+        {/* Mobile Toggle Button */}
+        <div className="mobile-toggle" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+          <span className="bar"></span>
+          <span className="bar"></span>
+          <span className="bar"></span>
+        </div>
+
+        <nav className={`nav ${isMobileMenuOpen ? 'nav-open' : ''}`}>
           <ul className="nav-list">
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/about">About Us</Link></li>
+            <li><Link to="/" onClick={handleLinkClick}>Home</Link></li>
+            <li><Link to="/about" onClick={handleLinkClick}>About Us</Link></li>
             <li
               className="dropdown-item"
-              onMouseEnter={() => setIsServicesOpen(true)}
-              onMouseLeave={() => setIsServicesOpen(false)}
+              onMouseEnter={() => window.innerWidth > 992 && setIsServicesOpen(true)}
+              onMouseLeave={() => window.innerWidth > 992 && setIsServicesOpen(false)}
             >
-              <Link to="/services" className="dropdown-trigger">
-                Services <span className="arrow">▼</span>
-              </Link>
-              {isServicesOpen && (
-                <ul className="dropdown-menu">
-                  <li className="nested-item">
-                    <span className="nested-trigger">By Vertical Market <span className="arrow-right">▶</span></span>
-                    <ul className="nested-menu">
-                      <li><Link to="/services#fmcg">FMCG</Link></li>
-                      <li><Link to="/services#retail">Retail</Link></li>
-                      <li><Link to="/services#automotive">Automotive</Link></li>
-                      <li><Link to="/services#healthcare">Healthcare</Link></li>
-                      <li><Link to="/services#industrial">Industrial</Link></li>
-                      <li><Link to="/services#aerospace">Aerospace</Link></li>
-                    </ul>
-                  </li>
-                  <li className="nested-item">
-                    <span className="nested-trigger">By Activity <span className="arrow-right">▶</span></span>
-                    <ul className="nested-menu">
-                      <li><Link to="/services#ecommerce">E-commerce</Link></li>
-                      <li><Link to="/services#express">Express & Parcel</Link></li>
-                      <li><Link to="/services#freight">Air & Ocean Freight</Link></li>
-                      <li><Link to="/services#contract">Contract Logistics</Link></li>
-                      <li><Link to="/services#customs">Customs</Link></li>
-                      <li><Link to="/services#supply-chain">Supply Chain Optimization</Link></li>
-                    </ul>
-                  </li>
-                </ul>
-              )}
+              <div
+                className="dropdown-trigger"
+                onClick={(e) => {
+                  if (window.innerWidth <= 992) {
+                    e.preventDefault();
+                    setIsServicesOpen(!isServicesOpen);
+                  }
+                }}
+              >
+                <Link to="/services" onClick={handleLinkClick}>Services</Link>
+                <span className="arrow" onClick={(e) => {
+                  // Prevent link click, just toggle dropdown
+                  e.preventDefault();
+                  e.stopPropagation();
+                  setIsServicesOpen(!isServicesOpen);
+                }}>▼</span>
+              </div>
+
+              <ul className={`dropdown-menu ${isServicesOpen ? 'show-dropdown' : ''}`}>
+                <li className="nested-item">
+                  <span className="nested-trigger">By Vertical Market <span className="arrow-right">▶</span></span>
+                  <ul className="nested-menu">
+                    <li><Link to="/services#fmcg" onClick={handleLinkClick}>FMCG</Link></li>
+                    <li><Link to="/services#retail" onClick={handleLinkClick}>Retail</Link></li>
+                    <li><Link to="/services#automotive" onClick={handleLinkClick}>Automotive</Link></li>
+                    <li><Link to="/services#healthcare" onClick={handleLinkClick}>Healthcare</Link></li>
+                    <li><Link to="/services#industrial" onClick={handleLinkClick}>Industrial</Link></li>
+                    <li><Link to="/services#aerospace" onClick={handleLinkClick}>Aerospace</Link></li>
+                  </ul>
+                </li>
+                <li className="nested-item">
+                  <span className="nested-trigger">By Activity <span className="arrow-right">▶</span></span>
+                  <ul className="nested-menu">
+                    <li><Link to="/services#ecommerce" onClick={handleLinkClick}>E-commerce</Link></li>
+                    <li><Link to="/services#express" onClick={handleLinkClick}>Express & Parcel</Link></li>
+                    <li><Link to="/services#freight" onClick={handleLinkClick}>Air & Ocean Freight</Link></li>
+                    <li><Link to="/services#contract" onClick={handleLinkClick}>Contract Logistics</Link></li>
+                    <li><Link to="/services#customs" onClick={handleLinkClick}>Customs</Link></li>
+                    <li><Link to="/services#supply-chain" onClick={handleLinkClick}>Supply Chain Optimization</Link></li>
+                  </ul>
+                </li>
+              </ul>
             </li>
-            <li><Link to="/careers">Careers</Link></li>
-            <li><Link to="/updates">Updates</Link></li>
-            <li><Link to="/booking">Booking</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
-            <li><Link to="/tracking" className="tracking-btn">Tracking</Link></li>
+            <li><Link to="/careers" onClick={handleLinkClick}>Careers</Link></li>
+            <li><Link to="/updates" onClick={handleLinkClick}>Updates</Link></li>
+            <li><Link to="/booking" onClick={handleLinkClick}>Booking</Link></li>
+            <li><Link to="/contact" onClick={handleLinkClick}>Contact</Link></li>
+            <li><Link to="/tracking" className="tracking-btn" onClick={handleLinkClick}>Tracking</Link></li>
             <li className="search-icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
                 <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
@@ -83,6 +110,21 @@ const Header = () => {
           width: 100%;
           padding: 0 20px;
         }
+        
+        /* Mobile Toggle */
+        .mobile-toggle {
+          display: none;
+          flex-direction: column;
+          gap: 5px;
+          cursor: pointer;
+        }
+        .bar {
+          width: 25px;
+          height: 3px;
+          background-color: var(--secondary-navy);
+          border-radius: 2px;
+        }
+
         .nav-list {
           display: flex;
           gap: 30px;
@@ -135,14 +177,20 @@ const Header = () => {
             background: #fff;
             box-shadow: 0 5px 20px rgba(0,0,0,0.15);
             padding: 10px 0;
-            display: block; /* Vertical list */
+            display: none; /* Hidden by default, shown by hover or state */
             min-width: 220px;
             border-top: 4px solid var(--accent-pink);
             animation: fadeIn 0.2s ease-out forwards;
             border-radius: 0 0 4px 4px;
             list-style: none;
         }
-        /* Bridge to keep hover active */
+        /* Desktop Hover: Show menu */
+        @media(min-width: 993px) {
+            .dropdown-item:hover .dropdown-menu {
+                display: block;
+            }
+        }
+        
         .dropdown-menu::before {
             content: '';
             position: absolute;
@@ -196,9 +244,11 @@ const Header = () => {
         }
         
         /* Show nested menu on hover */
-        .nested-item:hover .nested-menu {
-            display: block;
-            animation: fadeIn 0.2s ease-out forwards;
+        @media(min-width: 993px) {
+            .nested-item:hover .nested-menu {
+                display: block;
+                animation: fadeIn 0.2s ease-out forwards;
+            }
         }
 
         .nested-menu li {
@@ -254,8 +304,70 @@ const Header = () => {
             to { opacity: 1; transform: translateY(0); }
         }
 
+        /* Mobile Responsive Styles */
         @media (max-width: 992px) {
-            .nav-list { display: none; }
+            .mobile-toggle {
+                display: flex;
+            }
+            .nav {
+                position: absolute;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background: #fff;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease-in-out;
+            }
+            .nav.nav-open {
+                max-height: 500px; /* Allow height for menu */
+                padding-bottom: 20px;
+                overflow-y: auto;
+            }
+            .nav-list {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 20px;
+                gap: 15px;
+            }
+            .nav-list li {
+                width: 100%;
+            }
+            .nav-list a:not(.tracking-btn):not(.dropdown-menu a) {
+                display: block;
+                width: 100%;
+                padding: 10px 0;
+                border-bottom: 1px solid #eee;
+            }
+            .tracking-btn {
+                display: block;
+                text-align: center;
+                margin-top: 10px;
+            }
+            
+            /* Mobile Dropdown */
+            .dropdown-menu {
+                position: relative;
+                top: 0;
+                box-shadow: none;
+                border-top: none;
+                padding-left: 20px;
+            }
+            .show-dropdown {
+                display: block;
+            }
+            .nested-menu {
+                position: relative;
+                left: 0;
+                top: 0;
+                box-shadow: none;
+                min-width: 100%;
+                display: block; /* Always show children for simplicity on mobile, or toggle */
+            }
+            .nested-item {
+                padding: 5px 0;
+            }
         }
       `}</style>
     </header>

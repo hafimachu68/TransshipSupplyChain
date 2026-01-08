@@ -8,8 +8,9 @@
   /* Pink Hover/Button from Source */
   --text-dark: #6b717a;
   /* Body text from Source */
-  --text-title: #121319;
   /* Headings from Source */
+  --text-title: #121319;
+  --secondary-navy: #121319;
 
   /* Fonts */
   --font-main: 'Exo', sans-serif;
