@@ -24,21 +24,30 @@ const Contact = () => {
                             <p>Have a question or need a quote? Reach out to our team of logistics experts.</p>
 
                             <div className="info-item">
-                                <h3>Headquarters</h3>
-                                <p>123 Logistics Way, Transport City, TC 90210</p>
+                                <h3>Saudi Arabia Office</h3>
+                                <p>TRANSSHIP SUPPLY CHAIN SOLUTION</p>
+                                <p>BUILDING NO:7053</p>
+                                <p>KING FAHAD BIN ABDUL AZIZ ROAD</p>
+                                <p>AL KHOBAR SAUDI ARABIA</p>
+                                <p>POSTAL CODE :34432</p>
+                                <p className="phone"><strong>Mob:</strong> +966 55 967 0080</p>
+                                <p className="phone"><strong>Mob:</strong> +966 50 710 5150</p>
                             </div>
+
+                            <div className="info-item">
+                                <h3>India Office</h3>
+                                <p>TRANSSHIP SUPPLY CHAIN SOLUTION</p>
+                                <p>SECOND FLOOR</p>
+                                <p>HILITE BUSINESS PARK</p>
+                                <p>KOZHIKODE KERALA SOUTH INDIA</p>
+                                <p>POSTAL CODE:673014</p>
+                                <p className="phone"><strong>Mob:</strong> +91 99956 04757</p>
+                                <p className="phone"><strong>Mob:</strong> +91 80866 76409</p>
+                            </div>
+
                             <div className="info-item">
                                 <h3>Email</h3>
-                                <p>info@transship.com</p>
-                            </div>
-                            <div className="info-item">
-                                <h3>Phone</h3>
-                                <p>+1 (555) 123-4567</p>
-                            </div>
-                            <div className="info-item">
-                                <h3>Working Hours</h3>
-                                <p>Mon - Fri: 8:00 AM - 6:00 PM</p>
-                                <p>Sat: 9:00 AM - 1:00 PM</p>
+                                <p><a href="mailto:info@transship.co.in">info@transship.co.in</a></p>
                             </div>
                         </div>
                         <div className="contact-form-container">

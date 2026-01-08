@@ -146,7 +146,7 @@ const Home = () => {
                     <div className="vcex-spacing wpex-w-100 wpex-clear" ></div>
 
                     <div className="vcex-grid-container vcex-module wpex-grid wpex-gap-20 wpex-grid-cols-1 wpex-md-grid-cols-7" style={{ gap: 5 }}>
-                        <div className="vcex-module vcex-teaser vcex-teaser-two textcenter hvr hvr-shadow-radial wpex-surface-2 wpex-p-20 vc_custom_1667155066735" style={{ padding: 0, background: '#ffffff', borderRadius: 5 }}>
+                        <div className="vcex-module vcex-teaser vcex-teaser-two textcenter hvr hvr-shadow-radial wpex-surface-2 wpex-p-20 vc_custom_1667155066735" style={{ padding: 0, borderRadius: 5 }}>
                             <div className="vcex-teaser-media wpex-mb-0">
                                 <Link to="/services/by-vertical-market/fmcg/" title="Fast Moving Consumer Goods" className="wpex-no-underline">
                                     <img src={fmcgImg} alt="FMCG" width="250" height="250" />
@@ -159,7 +159,7 @@ const Home = () => {
                             </div>
                         </div>
 
-                        <div className="vcex-module vcex-teaser vcex-teaser-two textcenter hvr hvr-shadow-radial wpex-surface-2 wpex-p-20 vc_custom_1667155074425" style={{ padding: 0, background: '#ffffff', borderRadius: 5 }}>
+                        <div className="vcex-module vcex-teaser vcex-teaser-two textcenter hvr hvr-shadow-radial wpex-surface-2 wpex-p-20 vc_custom_1667155074425" style={{ padding: 0, borderRadius: 5 }}>
                             <div className="vcex-teaser-media wpex-mb-0">
                                 <Link to="/services/by-vertical-market/retail/" title="Retail" className="wpex-no-underline">
                                     <img src={retailImg} alt="Retail" width="250" height="250" />
@@ -172,7 +172,7 @@ const Home = () => {
                             </div>
                         </div>
 
-                        <div className="vcex-module vcex-teaser vcex-teaser-two textcenter hvr hvr-shadow-radial wpex-surface-2 wpex-p-20 vc_custom_1667155081639" style={{ padding: 0, background: '#ffffff', borderRadius: 5 }}>
+                        <div className="vcex-module vcex-teaser vcex-teaser-two textcenter hvr hvr-shadow-radial wpex-surface-2 wpex-p-20 vc_custom_1667155081639" style={{ padding: 0, borderRadius: 5 }}>
                             <div className="vcex-teaser-media wpex-mb-0">
                                 <Link to="/services/by-vertical-market/hightech/" title="Hightech" className="wpex-no-underline">
                                     <img src={hightechImg} alt="Hightech" width="250" height="250" />
@@ -185,7 +185,7 @@ const Home = () => {
                             </div>
                         </div>
 
-                        <div className="vcex-module vcex-teaser vcex-teaser-two textcenter hvr hvr-shadow-radial wpex-surface-2 wpex-p-20 vc_custom_1667155095497" style={{ padding: 0, background: '#ffffff', borderRadius: 5 }}>
+                        <div className="vcex-module vcex-teaser vcex-teaser-two textcenter hvr hvr-shadow-radial wpex-surface-2 wpex-p-20 vc_custom_1667155095497" style={{ padding: 0, borderRadius: 5 }}>
                             <div className="vcex-teaser-media wpex-mb-0">
                                 <Link to="/services/by-vertical-market/automotive/" title="Automotive" className="wpex-no-underline">
                                     <img src={automotiveImg} alt="Automotive" width="250" height="250" />
@@ -198,7 +198,7 @@ const Home = () => {
                             </div>
                         </div>
 
-                        <div className="vcex-module vcex-teaser vcex-teaser-two textcenter hvr hvr-shadow-radial wpex-surface-2 wpex-p-20 vc_custom_1667155103499" style={{ padding: 0, background: '#ffffff', borderRadius: 5 }}>
+                        <div className="vcex-module vcex-teaser vcex-teaser-two textcenter hvr hvr-shadow-radial wpex-surface-2 wpex-p-20 vc_custom_1667155103499" style={{ padding: 0, borderRadius: 5 }}>
                             <div className="vcex-teaser-media wpex-mb-0">
                                 <Link to="/services/by-vertical-market/industrial/" title="Industrial" className="wpex-no-underline">
                                     <img src={industrialImg} alt="Industrial" width="250" height="250" />
@@ -211,7 +211,7 @@ const Home = () => {
                             </div>
                         </div>
 
-                        <div className="vcex-module vcex-teaser vcex-teaser-two textcenter hvr hvr-shadow-radial wpex-surface-2 wpex-p-20 vc_custom_1667155110881" style={{ padding: 0, background: '#ffffff', borderRadius: 5 }}>
+                        <div className="vcex-module vcex-teaser vcex-teaser-two textcenter hvr hvr-shadow-radial wpex-surface-2 wpex-p-20 vc_custom_1667155110881" style={{ padding: 0, borderRadius: 5 }}>
                             <div className="vcex-teaser-media wpex-mb-0">
                                 <Link to="/services/by-vertical-market/aerospace-and-defence/" title="Aerospace and Defence" className="wpex-no-underline">
                                     <img src={aerospaceImg} alt="Aerospace and Defence" width="250" height="250" />
@@ -224,7 +224,7 @@ const Home = () => {
                             </div>
                         </div>
 
-                        <div className="vcex-module vcex-teaser vcex-teaser-two textcenter hvr hvr-shadow-radial wpex-surface-2 wpex-p-20 vc_custom_1667155120818" style={{ padding: 0, background: '#ffffff', borderRadius: 5 }}>
+                        <div className="vcex-module vcex-teaser vcex-teaser-two textcenter hvr hvr-shadow-radial wpex-surface-2 wpex-p-20 vc_custom_1667155120818" style={{ padding: 0, borderRadius: 5 }}>
                             <div className="vcex-teaser-media wpex-mb-0">
                                 <Link to="/services/by-vertical-market/healthcare/" title="Healthcare" className="wpex-no-underline">
                                     <img src={healthcareImg} alt="Healthcare" width="250" height="250" />
@@ -330,9 +330,9 @@ const Home = () => {
                                 </div>
                             </div> */}
 
-                     <div className="act-row-bottom">
+                            <div className="act-row-bottom">
                                 <div className="act-card-new act-sm">
-                                   <Link to="/services/by-activity/customs-and-foreign-trade/" className="act-link">
+                                    <Link to="/services/by-activity/customs-and-foreign-trade/" className="act-link">
                                         <img src={customsImg} alt="Customs and Foreign Trade" />
                                     </Link>
                                     <div className="act-content-new">
@@ -536,7 +536,15 @@ const Home = () => {
             border: 1px solid #000; /* thin black border */
         }
         .vcex-module.vcex-teaser:hover{transform: translateY(-6px);box-shadow:0 20px 30px rgba(14,30,37,0.08)}
-        .vcex-teaser-media img{display:block; margin:0 auto; max-width:250px; width:100%; height:auto}
+        .vcex-teaser-media img{
+            display:block; 
+            margin:0 auto; 
+            max-width:250px; 
+            width:100%; 
+            height:auto;
+            /* PRECISE Shift to #007bff (Primary Blue) */
+            filter: invert(36%) sepia(93%) saturate(1900%) hue-rotate(203deg) brightness(102%) contrast(106%) !important;
+        }
         .vcex-teaser-content { padding-top:40px; padding-right:20px; padding-bottom:40px; padding-left:20px }
         .vcex-teaser-heading { margin:0 }
         .vcex-teaser-heading + .vcex-teaser-text { margin-top:10px; }

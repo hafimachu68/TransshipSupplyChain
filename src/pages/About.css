@@ -1,0 +1,367 @@
+/* About Page Styles - Replicating cubeslogistics.com */
+
+.about-page {
+    font-family: 'Exo', sans-serif;
+    color: #6B717A;
+}
+
+/* Hero Section */
+.about-hero {
+    position: relative;
+    background-image: url('https://cubeslogistics.com/wp-content/uploads/2022/10/headers.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 180px 0 80px;
+    /* Adjusted padding to match look */
+    color: #fff;
+    text-align: center;
+}
+
+.about-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* approximate overlay */
+    background-image: url('https://cubeslogistics.com/wp-content/themes/Total/assets/images/dotted-overlay.png');
+    z-index: 1;
+}
+
+.about-hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.about-hero h1 {
+    font-family: 'Exo', sans-serif;
+    font-size: 50px;
+    font-weight: 500;
+    color: #ffffff;
+    margin: 0 0 10px;
+}
+
+.breadcrumbs {
+    font-size: 14px;
+    color: #ddd;
+}
+
+.breadcrumbs span {
+    margin: 0 5px;
+}
+
+.breadcrumbs a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Sections General */
+.section-padding {
+    padding: 80px 0;
+}
+
+.bg-light-grey {
+    background-color: #F2F2F2;
+}
+
+/* Intro Section */
+.about-intro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.about-text h2 {
+    font-family: 'Exo', sans-serif;
+    font-size: 34px;
+    font-weight: 300;
+    color: #121319;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+/* The layout shows an image on the right */
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.about-text p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #6B717A;
+    margin-bottom: 20px;
+}
+
+/* CMD Message */
+.cmd-section {
+    position: relative;
+    background-image: url('https://cubeslogistics.com/wp-content/uploads/2022/10/message.jpg');
+    background-attachment: fixed;
+    /* Parallax effect */
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+    color: #fff;
+}
+
+.cmd-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    background-image: url('https://cubeslogistics.com/wp-content/themes/Total/assets/images/dotted-overlay.png');
+    z-index: 1;
+}
+
+.cmd-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    background: transparent;
+}
+
+.cmd-title {
+    font-size: 34px;
+    font-weight: 300;
+    color: #fff;
+    margin-bottom: 40px;
+    display: inline-block;
+    position: relative;
+}
+
+/* Red dot accent */
+.cmd-title::after {
+    content: '';
+    display: block;
+    width: 8px;
+    height: 8px;
+    background-color: #e51d2e;
+    /* Approximate red */
+    border-radius: 50%;
+    margin: 10px auto 0;
+}
+
+.cmd-text {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #ccc;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+.cmd-signature {
+    text-align: right;
+    color: #fff;
+}
+
+.cmd-name {
+    font-weight: 700;
+    font-size: 18px;
+    display: block;
+    color: #fff;
+}
+
+.cmd-role {
+    font-size: 14px;
+    color: #aaa;
+}
+
+
+/* Team Section */
+.team-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.team-header h2 {
+    font-size: 34px;
+    font-weight: 300;
+    color: #121319;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.team-member {
+    text-align: center;
+}
+
+.team-img-wrapper {
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-radius: 4px;
+    /* Optional */
+}
+
+.team-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.team-info h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #121319;
+    margin: 0 0 5px;
+}
+
+.team-info p {
+    font-size: 14px;
+    color: #6B717A;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+/* Group Section */
+.group-section {
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.group-logo {
+    max-width: 300px;
+    margin: 0 auto 30px;
+}
+
+.group-text {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+
+/* Vision Mission Values */
+.vmv-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    text-align: center;
+}
+
+.vmv-item {
+    background: transparent;
+    padding: 20px;
+}
+
+.vmv-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 20px;
+    /* Use SVGs or images */
+}
+
+.vmv-item h3 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #121319;
+    margin-bottom: 15px;
+}
+
+.vmv-item p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+/* Concerns Section */
+.concerns-section {
+    padding-top: 50px;
+    padding-bottom: 80px;
+    border-top: 1px solid #eee;
+}
+
+.concerns-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.concern-col h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #121319;
+    margin-bottom: 20px;
+}
+
+.concern-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.concern-list li {
+    margin-bottom: 10px;
+    padding-left: 15px;
+    position: relative;
+}
+
+.concern-list li::before {
+    content: '›';
+    position: absolute;
+    left: 0;
+    color: #C51368;
+    /* Pink accent */
+    font-weight: bold;
+}
+
+.concern-list a {
+    color: #6B717A;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.3s;
+}
+
+.concern-list a:hover {
+    color: #C51368;
+}
+
+
+/* Responsive */
+@media (max-width: 992px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-intro-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .vmv-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .concerns-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .concerns-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-hero h1 {
+        font-size: 36px;
+    }
+}
